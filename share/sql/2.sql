@@ -7,7 +7,7 @@ CREATE FOREIGN TABLE t_elem_map_timeseries (
   STANDARD_NAME varchar(100),
   CELL_METHOD varchar(100),
   OBSERVATION_TIMESPAN varchar(50),
-  OFFSET varchar(50),
+  TIME_OFFSET varchar(50),
   SENSOR_NR smallint,
   SENSOR_LEVEL smallint,
   AUDIT_DATO date,
