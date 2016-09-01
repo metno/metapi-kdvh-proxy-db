@@ -27,4 +27,4 @@ Instead, create a new SQL script in the sequence, and if needed, undo
 or alter the results of the previous scripts.
 
 - Although not currently supported, downgrade scripts ought to be
-written for each SQL script. 
+written for each SQL script.
