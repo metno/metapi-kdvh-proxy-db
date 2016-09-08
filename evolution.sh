@@ -163,7 +163,7 @@ if [ 0 != $? ]; then
   echo "ERROR: Installation of $DATABASE_BASELINE failed"
   exit 1
 fi
-psql -U $DATABASE_USER -p $DATABASE_PORT $DATABASE_NAME -c "INSERT INTO configuration VALUES (0, now(), '$DATABASE_BASELINE', NULL);"
+psql -U $DATABASE_USER -p $DATABASE_PORT $DATABASE_NAME -c "INSERT INTO configuration (configuration_id, applied_at, apply_script,revert_script) SELECT 0, now(), '$DATABASE_BASELINE', NULL WHERE NOT EXISTS (SELECT 1 FROM configuration WHERE configuration_id = 0);"
 echo "done"
 
 # Init Evolution
