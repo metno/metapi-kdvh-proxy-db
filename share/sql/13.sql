@@ -1,0 +1,9 @@
+CREATE FOREIGN TABLE T_ELEM_PDATA (
+  STNR              BIGINT, 
+  ELEM_CODE         VARCHAR(10), 
+  FDATO             DATE, 
+  TDATO             DATE, 
+  TABLE_NAME        VARCHAR(15), 
+  FLAG_TABLE_NAME   VARCHAR(10), 
+  AUDIT_DATO        DATE DEFAULT sysdate
+) SERVER KDVH OPTIONS (table 'T_ELEM_PDATA');
